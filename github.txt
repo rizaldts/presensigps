@@ -1,0 +1,79 @@
+Mengunggah dan menghubungkan proyek Visual Studio Code (VSCode) ke GitHub melibatkan beberapa langkah. Berikut adalah panduan langkah demi langkah untuk melakukannya:
+
+### Persiapan Awal
+1. **Instal Git**:
+   Pastikan Git sudah terinstal di sistem Anda. Anda bisa mengunduh dan menginstalnya dari [situs resmi Git](https://git-scm.com/).
+
+2. **Buat Akun GitHub**:
+   Jika Anda belum memiliki akun GitHub, buat akun di [GitHub](https://github.com/).
+
+3. **Buat Repositori Baru di GitHub**:
+   - Masuk ke akun GitHub Anda.
+   - Klik ikon "+" di sudut kanan atas halaman dan pilih "New repository".
+   - Beri nama repositori Anda, tambahkan deskripsi jika diperlukan, dan pilih apakah repositori akan bersifat publik atau privat.
+   - Klik tombol "Create repository".
+
+### Mengunggah Proyek ke GitHub dari VSCode
+1. **Buka Proyek di VSCode**:
+   Buka VSCode dan buka folder proyek yang ingin Anda unggah ke GitHub.
+
+2. **Buka Terminal di VSCode**:
+   Anda bisa membuka terminal di VSCode dengan menekan `Ctrl + ` (tanda backtick) atau melalui menu `View` > `Terminal`.
+
+3. **Inisialisasi Git di Proyek**:
+   Jika proyek Anda belum diinisialisasi dengan Git, lakukan dengan perintah berikut di terminal:
+   ```sh
+   git init
+   ```
+
+4. **Tambahkan dan Commit File**:
+   Tambahkan semua file ke staging area dan lakukan commit awal:
+   ```sh
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+5. **Hubungkan Proyek ke Repositori GitHub**:
+   - Salin URL repositori GitHub yang baru saja Anda buat. URL biasanya berformat `https://github.com/username/repo-name.git`.
+   - Jalankan perintah berikut untuk menghubungkan repositori lokal dengan repositori GitHub:
+   ```sh
+   git remote add origin https://github.com/username/repo-name.git
+   ```
+
+6. **Push ke Repositori GitHub**:
+   Unggah perubahan Anda ke repositori GitHub dengan perintah berikut:
+   ```sh
+   git push -u origin main
+   ```
+   Jika Anda menggunakan branch `master` alih-alih `main`, ganti `main` dengan `master` dalam perintah di atas.
+
+### Menggunakan VSCode Extension untuk Integrasi GitHub
+VSCode memiliki ekstensi yang dapat membantu mengelola Git dan GitHub dengan lebih mudah.
+
+1. **Instal Ekstensi GitHub**:
+   - Buka VSCode.
+   - Pergi ke `Extensions` (ikon di sidebar kiri atau `Ctrl + Shift + X`).
+   - Cari "GitHub" dan instal ekstensi "GitHub Pull Requests and Issues".
+
+2. **Masuk ke GitHub**:
+   - Klik ikon akun di sudut kiri bawah VSCode.
+   - Pilih `Sign in to GitHub` dan ikuti instruksi untuk masuk.
+
+3. **Sinkronisasi dengan GitHub**:
+   Ekstensi ini memungkinkan Anda melihat pull request, masalah, dan aktivitas lainnya langsung dari VSCode. Anda juga dapat melakukan push, pull, dan melakukan tindakan Git lainnya melalui antarmuka grafis.
+
+### Menyunting dan Mengupdate Proyek
+1. **Menambahkan Perubahan Baru**:
+   Setiap kali Anda melakukan perubahan pada proyek, tambahkan dan commit perubahan tersebut:
+   ```sh
+   git add .
+   git commit -m "Your commit message"
+   ```
+
+2. **Push Perubahan ke GitHub**:
+   Unggah perubahan ke repositori GitHub:
+   ```sh
+   git push
+   ```
+
+Dengan mengikuti langkah-langkah di atas, Anda dapat dengan mudah mengunggah dan menghubungkan proyek VSCode ke GitHub serta menjaga agar repositori tetap sinkron dengan perubahan yang Anda buat.
